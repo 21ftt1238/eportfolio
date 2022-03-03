@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 6-2</title>
+    <style type="text/css"> 
+
+    .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+    } 
+    .parent-element {
+        /*position: relative;*/
+        height: 900px;
+        padding:   10px; /*left right up bottom is 10*/
+        background-color: #81adc8; /*<-- hex colour*/
+    }
+
+    .main-element {
+        /*position: relative;*/
+        /*position: static; follows the original | no matter if its change, it will still use original */
+        /*left: 10px;
+        top: 10px;*/
+
+        /*position: absolute;*/ /* choose 1st element with absolute will look at its parent | */
+        position: fixed;/*fixed doesnt effect scrolling [remain at the location]| absolute[always look for the parent| effects by scrolling] */
+        left: 0;
+        /*right: 0;*/
+        bottom: 0;
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>
