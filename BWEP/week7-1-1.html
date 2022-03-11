@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 7-1</title>
+
+	<style type="text/css">
+		
+		div{display: flex; 
+			border: 1px solid; width: 800px;}
+		p{width:100px;height: 100px;
+			background-color: cyan;
+			border: 1px solid;
+			box-sizing: border-box;} /*includes the padding and border, not margin */
+			/*flex grow search nanti*/
+
+			/*p:nth-child(1);
+			p:nth-child(3);
+			p:nth-child(4);{flex-grow: 1} 
+			p:nth-child(2);{flex-grow: 2} */
+
+			/*180px width 260px*/
+
+			/*1. find parent width 800px
+			2. total widths of children = 100 x 4 = 400
+			3. calc available remaining = 800-400 = 400
+			4. calc total grow factor
+				1 + 1 +1 +2 =5
+			5. calc space alloc
+			grow ratio x remaining space
+				p1 1/5 * -400 = 80
+				p2 2/5 * 400 = 160
+				p3 1/5 * 400 = 80
+				p4 1/5 * 400 = 80
+			6. calc final widths
+				space alloc + initial width
+				p1 -80 + 100 =180
+				p2 160 + 100 = 260
+				p3 80 + 100 =180
+				p4 80 + 100 =180
+
+				180+260+180+180=800*/
+
+			/*p:nth-child(1),
+			p:nth-child(2){flex-grow: 1}
+			p:nth-child(4){flex-grow: 2}*/
+
+			/*1. find parent width 800px
+			2. total widths of children = 100 x 4 = 400
+			3. calc available remaining = 800-400 = 400
+			4. calc total grow factor
+				4
+			5. calc space alloc
+			grow ratio x remaining space
+				p1 1/4  = 100
+				p2 1/4  = 100
+				p3 0/4  = 0
+				p4 2/4  = 200
+			6. calc final widths
+				space alloc + initial width
+				p1 100 + 100 =200
+				p2 100 + 100 = 200
+				p3 0 + 100 =100
+				p4 200 + 100 =300
+
+				200+200+100+300=800*/
+
+			div{width: 300px}/*not specify 75px*/
+			
+
+			/*p:nth-child(1), p:nth-child(2){flex-shrink: 1}
+			p:nth-child(3){flex-grow: 0}
+			p:nth-child(4){flex-grow: 2}*/
+
+			/*1. find parent width 300px
+			2. total widths of children = 100*4=400
+			3. calc available remaining = 300-400=-100
+			4. calc total grow factor
+				1+1+0+2=4
+			5. calc space alloc
+			grow ratio x remaining space
+				p1 1/4*-100  = -25
+				p2 1/4*  = -25
+				p3 0/4  = 0
+				p4 2/4  = -50
+			6. calc final widths
+				space alloc + initial width
+				p1 -25 + 100 =75
+				p2 -25 + 100 = 75
+				p3 0 + 100 =100
+				p4 -50 + 100 =50
+
+				75+75+100+50=300*/
+
+
+	</style>
+</head>
+<body>
+<div>
+	<p>1</p><p>2</p><p>3</p><p>4</p>
+</div>
+</body>
+</html>
