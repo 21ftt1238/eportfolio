@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>week7-e-p1</title>
+
+	<style type="text/css">
+
+		div{
+			height: 800px;
+			border: 0%;
+		}
+
+		table,tr{
+			border: 2px solid;
+			width: 660px;
+			border-collapse: collapse;
+		}
+
+		td{
+			height: 25px;
+		}
+
+		h3{
+			padding-bottom: 10px;
+			padding-top: 10px;
+			text-align: center;
+		}
+
+		 h3,table{
+		 	margin: auto;
+		 }
+
+		</style>
+	
+</head>
+<body>
+	<h3>Registration for Covid-19 Volunteer - ® C19-Team</h3>
+
+	<form method="" action="">
+	<table border="1" cellpadding="10">
+
+	<!-- Row 1 | to indicate number of rows-->
+	<tr>
+
+	<td width="200">	
+		<label>Fullname</label>
+	</td>
+	<td width="200">
+		<input type="text" name="txtFullName" maxlength="30" pattern="[A-z]{30}">
+	</td>
+	
+	</tr>
+
+	<!-- Row 2 -->
+	<tr>
+
+	<td>	
+		<label>Email</label>
+	</td>
+	<td>
+		<input type="Email" name="txtEmail">
+	</td>
+
+	</tr>
+
+	<!-- Row 3 -->
+	<tr>
+
+	<td>	
+	<label>Date you can start</label>
+	</td>
+	<td>
+		<input type="date" name="dateStart">
+	</td>
+	</tr>
+
+	<!-- Row 4 -->
+	<tr>
+
+	<td>	
+		<label>Morning shift preference</label>
+	</td>
+	<td>
+		<input type="time" name="timeAM">
+	</td>
+	</tr>
+
+	<!-- Row 5 -->
+	<tr>
+
+	<td>	
+		<label>Evening shift perference</label>
+	</td>
+	<td>
+		<input type="time" name="timePM">
+	</td>
+
+	</tr>
+
+	<!-- Row 6 -->
+	<tr>
+
+	<td>	
+		<label>How many hours you can work? In multiple of 3</label>
+	</td>
+	<td>
+		<input type="number" name="numHour" value="3" step="3" min="3" max="9">
+	</td>
+
+	</tr>
+
+	<!-- Row 7 -->
+	<tr>
+
+	<td>	
+		<label>Distance you willing to commute to volunteer center?</label>
+	</td>
+	<td>
+		<label>1</label>
+		<input type="range" name="rangeDistance" value="3" min="1" max="15">
+		<label>15</label>
+	</td>
+
+	</tr>
+
+	<!-- Row 8 -->
+	<tr>
+
+	<td>	
+		<label>You currency perference for payment?</label>
+	</td>
+	<td>
+		<input type="radio" name="radCurrency" id="pound">
+		<label>&pound;</label>
+
+		<input type="radio" name="radCurrency" id="yen">
+		<label>&yen;</label>
+
+		<input type="radio" name="radCurrency" id="euro">
+		<label>&euro;</label>
+	</td>
+
+	</tr>
+
+	<!-- Row 9 --> 
+	<tr align="center">
+
+	<td colspan="2">
+		<textarea name="txtA_Address" rows="6" cols="40" placeholder="Type your home address"></textarea>
+	</td>
+
+	</tr>
+
+	<!-- Row 10 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<del>You will be given daily meals</del>
+	</tr>
+
+	<!-- Row 11 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<label for="checkTerms"><input type="checkbox" name="checkTerms" disabled="1" checked="1" id="checkTerms"> I agree to all terms and conditions</label>
+	</td>
+
+	</tr>
+
+	<!-- Row 12 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<label for="checkRobot">Prove you are not robot: 10 &#60; 20? 
+			<input type="checkbox" name="checkRobot" id="checkRobot"></label>
+	</td>
+
+	</tr>
+
+	<!-- Row 13 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<input type="submit" name="btnSubmit" value="Volunteer now!">
+	</td>
+
+	</tr>
+
+	<!-- Row 14 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<input type="reset" name="btnReset" value="Start Over">
+	</td>
+
+	</tr>
+
+	<!-- Row 15 --> 
+	<tr align="center">
+
+	<td colspan="2">	
+		<label>For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">website</a>
+	</td></label>
+
+	</tr>
+
+</table>
+</form>
+</body>
+</html>
