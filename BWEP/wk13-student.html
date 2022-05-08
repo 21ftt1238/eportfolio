@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<body>
+<input type="text" id="name" placeholder="name"><br>
+<input type="radio" name="gender" value="male" id="male">Male
+<input type="radio" name="gender" value="female" id="female">Female<br>
+<input type="checkbox" name="wishlist" value="money">money
+<input type="checkbox" name="wishlist" value="travel">travel
+<input type="checkbox" name="wishlist" value="happiness">happines<br>
+<select name="choice" id="wish">
+	<option value="eternal">eternal life</option>
+	<option value="young">forever young</option>
+	<option value="beauty">eternal beauty</option>
+</select>
+<button onclick="retGender()">reveal gender</button>
+<button onclick="retWishlist()">reveal wishlist</button>
+<button onclick="retSelect()">reveal select</button>
+
+<script type="text/javascript">
+	function retSelect(){
+		var wish=document.getElementById("wish");
+		//alert(wish.value);
+		alert(wish.options[wish.selectedIndex].value);
+	}
+	function retWishlist(){
+		var wishlist = document.getElementsByName("wishlist"); //same like array
+		var wishes = "";
+		// if(whishlist[0].checked){wishes+=whishlist[0].value+" "}
+		// if(whishlist[1].checked){wishes+=whishlist[1].value+" "}
+		// if(whishlist[2].checked){wishes+=whishlist[2].value+" "}
+		for(var i=0;i<whishlist.length;i++){
+			if(wishlist[i].checked){wishes+=whishlist[i].value+" "}
+		}
+					
+			alert(wishes); 
+	}
+	function retGender(){
+		var male = document.getElementById("male");
+		var female = document.getElementById("female");
+		var selectedGender="gender: ";
+
+		//if(male.checked){alert("male was selected")}
+			//if(female.checked){alert("female was selected")}
+
+			if(male.checked){selectedGender+=" male"}
+				if(female.checked){selectedGender+=" female"}
+					// alert(selectGender)
+				selectedGender=="gender: "?alert("no gender selected"): alert(selectedGender);
+				// alert(selectedGender)
+	}
+
+	
+</script>
+</body>
+</html>

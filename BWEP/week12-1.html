@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title>week12-1</title>
+</head>
+<body>
+
+	<!-- <input type="text" id="name">
+	<div id="msg"></div>
+	<button onclick="copyToDiv()">Copy to div</button> -->
+
+	<!-- <input type="text" id="name"> <br>
+	<input type="text" id="age"><br>
+	<br>
+	EEdu background<br>
+	<select id="">
+		<option value="">o lvl</option><br>
+		<option value="">a lvl</option><br>
+		<option value="">diploma</option><br>
+	</select><br>
+	<br>
+	<textarea placeholder="address"></textarea>
+	<button onclick="copyToDiv()">Submit</button>
+	<div id="msg"></div> -->
+	<!-- <button onclick="copyToDiv()">Copy to div</button>
+ -->
+
+ 	<input type="text" id="name" onkeyup="uppercase()" onfocus="resizer()" onblur="normal()"><br>
+	<input type="text" id="age"><br>
+	Edu background <br><select id="edu">
+		<option value="A level">A level</option>
+		<option value="Diploma">Diploma</option>
+	</select><br>
+
+	<textarea placeholder="address" id="add"></textarea>
+	<button onclick="submit()">Submit</button>
+	<div id="msg"></div>
+	<div id="msg1"></div>
+	<div id="msg2"></div>
+
+<script type="text/javascript">
+	// function copyToDiv() {
+	// 	var name = document.getElementById("name");
+	// 	var msg = document.getElementById("msg");
+	// 	msg.innerHTML = name.value;
+	// 	name.style.border="10px solid cyan";
+	// 	name.style.fontSize="2em";
+
+	// }
+
+	// function display() {
+	// 	var name = document.getElementById("name");
+	// 	var age = document.getElementById("age");
+	// 	var address = document.getElementById("address");
+	// 	var msg = document.getElementById("msg");
+	// 	msg.innerHTML = name.value;
+	// 	msg.innerHTML = age.value;
+	// 	// msg.innerHTML = value.value("your background is ");
+	// 	msg.innerHTML = address.value;
+	// 	msg.innerHTML =;
+
+	// 	var content="Hi "+name.value+"<br>";
+
+	// }
+	// function uppercase(){
+	// 	var name = document.getElementById("name");
+	// 	name.value = name.value.toUpperCase("");
+	// }
+	// function resizer(){
+	// 	var name = document.getElementById("name");
+	// 	name.style.fontSize = "1.5em";
+	// }
+	function onblur(){
+		var name = document.getElementById("name");
+		name.value = name.value.toUpperCase("");
+	}
+
+
+	function uppercase(){
+
+		var name = document.getElementById("name");
+		name.value = name.value.toUpperCase();
+
+	}
+			function resizer(){
+
+		var name = document.getElementById("name");
+		name.style.fontSize = "1.5em";
+
+	}
+				function normal(){
+
+		var name = document.getElementById("name");
+		name.style.fontSize = "1em";
+
+	}
+
+	function submit(){
+
+		var name = document.getElementById("name");
+		var age = document.getElementById("age");
+		var address = document.getElementById("address");
+		var edu = document.getElementById("edu");
+		var msg = document.getElementById("msg");
+
+		// can use getElementByTagname
+		// getElementByClass
+
+        var content = "Hi "+name.value+"<br>";
+        // var content = "Hi "+name.value.toUpperCase()+"<br>";
+        content+="This year you will be "+age.value+"<br>"
+
+        content+="Your edu background is "+edu.value+"<br>"
+        content+="Your address is "+address.value
+
+	}
+	
+</script>
+</body>
+<!-- a dom is like tree like structure start with head(html)input n dif and body -->
+</html>

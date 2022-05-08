@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>week10-3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var name = prompt("Enter name:");
+		// var time = prompt(hb.getHours("Enter time:"));
+		// var num1 = parseInt(20("Enter first number"));
+		// var num2 = parseInt(50("Enter second number"));
+		// var choice1 = prompt(1("Enter 1st choice:"));
+		// var choice2 = prompt(2("Enter 2nd choice:"));
+	
+	var time = prompt("Enter time in 24hr(whole number only): ");
+	var first = prompt("Enter first number: ");
+	var second = prompt("Enter second number: ");
+	var choice = prompt("Enter choice. 1 add, 2 multiply: ");
+		if(time <= 12)
+		{document.write("Good Morning " + name  )}
+	else if(time <=24)
+		{document.write("Good day " + name)}
+	else
+		{document.write("Sorry " + name + ". I need a valid time.")}
+
+	document.write("<br>You entered " + first + " & " + second);
+
+	if(choice == 1)
+		{document.write("<br>You decided to add them");
+		document.write("<br>The answer is " + (Number(first)+Number(second)));}
+	if(choice == 2)
+		{document.write("<br>You decided to multiply them");
+		document.write("<br>The answer is " + first*second);}
+
+	if(time <= 12)
+		{document.write("<br>Enjoy your morning")}
+	else if(time <=24)
+		{document.write("Enjoy the rest of your days ")}
+	</script>
+
+</body>
+</html>
